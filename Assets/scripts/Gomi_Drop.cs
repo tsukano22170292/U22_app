@@ -1,36 +1,50 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Gomi_Drop : MonoBehaviour
 {
     public GameObject objectPrefab; // オブジェクトのプレハブを格納する変数
     public GameObject objectPrefab2; //２個目のオブジェクト
     public GameObject objectPrefab3;
-    public int objectCount = 10;
-    public float spawnRangeX; // X軸の出現範囲
-    public float spawnRangeY; // Y軸の出現範囲
+
+    public int objectCount = 30;
+
+    private Bounds tilemapBounds;
 
     public LayerMask collisionLayer;
 
     void Start()
-    {
-        Camera mainCamera = Camera.main;
-        float cameraHeight = 2f * mainCamera.orthographicSize;
-        float cameraWidth = cameraHeight * mainCamera.aspect;
+    {   
+        //デバッグログの追加
+        //Debug.Log("Start() method called.");
 
-        spawnRangeX = cameraWidth;
-        spawnRangeY = cameraHeight;
-        
+        //タイルマップの範囲を取得
+        GameObject grid = GameObject.Find("Grid");
+        TilemapRenderer tilemapRenderer = grid.GetComponentInChildren<TilemapRenderer>();
+        tilemapBounds = tilemapRenderer.bounds;
+        float spawnRangeX = tilemapBounds.size.x;
+        float spawnRangeY = tilemapBounds.size.y;
+
+        //objectCountの数だけオブジェクトを生成する        
         for (int i = 0; i < objectCount; i++)
         {
-            SpawnObject();
+            SpawnObject(spawnRangeX,spawnRangeY);
         }
+        Debug.Log("tilemapBounds.min: " + tilemapBounds.min);
+        Debug.Log("tilemapBounds.max: " + tilemapBounds.max);
     }
 
-    void SpawnObject()
+    private void SpawnObject(float spawnRangeX, float spawnRangeY)
     {
-        float spawnPositionX = Random.Range(-spawnRangeX / 2f, spawnRangeX / 2f); // X軸のランダムな座標を生成
-        float spawnPositionY = Random.Range(-spawnRangeY / 2f, spawnRangeY / 2f); // Y軸のランダムな座標を生成
+        //デバッグログの追加
+        //Debug.Log("Spawning object.");
+
+        float spawnPositionX = Random.Range(tilemapBounds.min.x, tilemapBounds.max.x); // X軸のランダムな座標を生成
+        float spawnPositionY = Random.Range(tilemapBounds.min.y, tilemapBounds.max.y); // Y軸のランダムな座標を生成
         Vector2 spawnPosition = new Vector2(spawnPositionX, spawnPositionY);
+
+        // オブジェクトが生成される予定の座標を一時的に保持
+        Vector2 spawnPositionTemp = new Vector2(spawnPosition.x, spawnPosition.y);
 
         int randomIndex = Random.Range(0, 3); //０または２のランダムな値を生成
 
@@ -51,7 +65,11 @@ public class Gomi_Drop : MonoBehaviour
 
             //重なりをチェック。重なっていたらtrue
             bool isOverlapping = CheckOverlap(obj);
+            Debug.Log("isOverlapping:" + isOverlapping);
             if(isOverlapping){
+                //オブジェクトが生成されるはずだった座標をデバッグログに表示
+                Debug.Log("Expected spaw position" + spawnPositionTemp);
+
                 Destroy(obj); //重なっていたらオブジェクトを破棄する
             }
         }
@@ -60,9 +78,9 @@ public class Gomi_Drop : MonoBehaviour
 
     bool CheckOverlap(GameObject obj)
     {
-        Vector2 colliderSize = GetComponent<BoxCollider2D>().size;
+        Vector2 colliderSize = obj.GetComponent<BoxCollider2D>().size;
         //オブジェクトの中心を基準にして、当たり判定を持つオブジェクトとの重なりをチェック
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(obj.transform.position, colliderSize, 0, collisionLayer);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(obj.transform.position, colliderSize, 0,collisionLayer);
         return colliders.Length > 0;
     }
 
