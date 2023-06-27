@@ -15,6 +15,8 @@ public class Gomi_Drop : MonoBehaviour
 
     public GameObject generatedObject; //他のスクリプトで生成されたオブジェクトを参照するための変数
 
+    public ItemDatabase itemDatabase;
+
     void Start()
     {   
         //デバッグログの追加
