@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerControl_1 : MonoBehaviour
 {
-    
     [SerializeField] LayerMask BckgroundObjectLayer;
+    [SerializeField] private ItemDatabase itemDatabase;
 
     Animator animator;
     bool isMoving;
@@ -13,6 +13,12 @@ public class PlayerControl_1 : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        itemDatabase = Resources.Load<ItemDatabase>("ItemDatabase");
+    }
+
+    void Start()
+    {
+        gameObject.tag = "player";
     }
 
     void Update()
@@ -63,11 +69,21 @@ public class PlayerControl_1 : MonoBehaviour
 
     //塚野が追加したごみとの衝突処理用のメソッド
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        string collidingObjectTag = collision.gameObject.tag;
-        if (collidingObjectTag == "akikan" || collidingObjectTag == "cardboard" || collidingObjectTag == "petbottle")
+    {   
+        if (collision.gameObject != null)
         {
-            Destroy(collision.gameObject);//他のオブジェクトに触れたら消える
+           string collidingObjectTag = collision.gameObject.tag;
+            if (collidingObjectTag == "akikan" || collidingObjectTag == "cardboard" || collidingObjectTag == "petbottle")
+            {
+                Destroy(collision.gameObject);//他のオブジェクトに触れたら消える
+
+                //アイテムデータの更新
+                Item item = itemDatabase.GetItemByTag(collidingObjectTag);
+                if(item != null)
+                {
+                    item.count++;
+                }
+            } 
         }
     }
 }
