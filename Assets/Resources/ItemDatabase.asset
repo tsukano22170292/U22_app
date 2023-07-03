@@ -16,9 +16,12 @@ MonoBehaviour:
   - itemName: akikan
     itemID: 0
     count: 0
+    itemImage: {fileID: 2800000, guid: 112de6bc295f7304aa735cbd0ca254bd, type: 3}
   - itemName: cardboard
     itemID: 1
-    count: 0
+    count: 1
+    itemImage: {fileID: 2800000, guid: 0b68fca717e9c13458e5490fb0dab43d, type: 3}
   - itemName: petbottle
     itemID: 2
-    count: 0
+    count: 6
+    itemImage: {fileID: 2800000, guid: 48559a6b1edfcb246ab53a06c4b9f084, type: 3}

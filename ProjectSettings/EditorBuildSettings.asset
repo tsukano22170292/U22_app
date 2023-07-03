@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/map.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/map _tsukano_test.unity
+    guid: 90604b3fee13a054a836a97298079622
+  - enabled: 1
+    path: Assets/Scenes/inventory.unity
+    guid: 784a45c91d2bd5343a896dbf6f4dda27
   m_configObjects: {}

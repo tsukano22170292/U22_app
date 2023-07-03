@@ -30,5 +30,6 @@ public class Item
     public string itemName;
     public int itemID;
     public int count;
+    public Texture2D itemImage;
     // 他に必要なアイテム情報を追加することができます
 }
