@@ -60,6 +60,9 @@ TagManager:
   - name: BackgroundObject
     uniqueID: 3298915299
     locked: 0
+  - name: scenechange
+    uniqueID: 3152917733
+    locked: 0
   - name: 'player '
     uniqueID: 2061689563
     locked: 0
