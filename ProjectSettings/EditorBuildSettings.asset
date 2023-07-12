@@ -5,13 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/map.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/map _tsukano_test.unity
     guid: 90604b3fee13a054a836a97298079622
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/inventory.unity
     guid: 784a45c91d2bd5343a896dbf6f4dda27
+  - enabled: 1
+    path: Assets/Scenes/map3.unity
+    guid: 392577710b127bc40931d419c46da42d
+  - enabled: 1
+    path: Assets/Scenes/map2.unity
+    guid: d009a1de124db65499503cab07babb1a
+  - enabled: 1
+    path: Assets/Scenes/house2.unity
+    guid: 7e24e406ff72dd548a0bb12dd312f698
+  - enabled: 1
+    path: Assets/Scenes/house.unity
+    guid: 85867e1bf1aab9f4f9da3fcbdd1b25d7
   m_configObjects: {}
