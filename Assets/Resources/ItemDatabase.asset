@@ -23,7 +23,7 @@ MonoBehaviour:
     itemImage: {fileID: 2800000, guid: 0b68fca717e9c13458e5490fb0dab43d, type: 3}
   - itemName: petbottle
     itemID: 2
-    count: 1000
+    count: 0
     itemImage: {fileID: 2800000, guid: 48559a6b1edfcb246ab53a06c4b9f084, type: 3}
   money:
     money: 100
@@ -31,8 +31,8 @@ MonoBehaviour:
   synthesisItems:
   - itemName: fuku
     synthesisItemID: 0
-    count: 0
+    count: 3
     itemImage: {fileID: 2800000, guid: fa8fbe9038976f04f9f291f0bf7a6b57, type: 3}
     needAkikan: 0
     needCardboard: 0
-    needPetbottle: 15
+    needPetbottle: 5

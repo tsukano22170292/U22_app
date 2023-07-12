@@ -14,7 +14,7 @@ public class GetTotalCountOutput : MonoBehaviour
         // アイテムの合計数を表示するテキストを更新する
         foreach (TextMeshProUGUI text in totalCountText)
         {
-            text.text = "ひろったごみのかず" + itemDatabase.GetTotalCount().ToString() + "こ";
+            text.text = "拾ったごみの数" + itemDatabase.GetTotalCount().ToString() + "こ";
         }
     }
 }

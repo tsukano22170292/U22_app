@@ -4,6 +4,7 @@
 ガギグゲゴザジズゼゾダヂヅデドバビブベボ
 ぁぃぅぇぉゃゅょっ
 ァィゥェォャュョッ
-0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ー- 
+0123456789:：;<=>?！@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ー- 
 ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ
 ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２３４５６７８９０
+拾金回数円個道具必要戻成功所持失敗作

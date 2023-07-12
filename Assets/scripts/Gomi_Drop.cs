@@ -7,7 +7,7 @@ public class Gomi_Drop : MonoBehaviour
     public GameObject object_cardboard; //２個目のオブジェクト
     public GameObject object_petbottle;
 
-    public int objectCount = 30; //オブジェクトを生成する数
+    public int objectCount; //オブジェクトを生成する数
 
     private Bounds tilemapBounds;
 
