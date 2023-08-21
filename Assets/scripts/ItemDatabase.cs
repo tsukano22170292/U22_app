@@ -68,6 +68,30 @@ public class ItemDatabase : ScriptableObject
         //一致しなかったらnullを返す
         return null;
     }
+
+    //SynthesisItemのsynthesisCountの合計数を返すメソッド
+    public int GetTotalSynthesisCount()
+    {
+        int totalSynthesisCount = 0;
+        // アイテムの配列をループして、アイテムの数を合計する
+        foreach (SynthesisItem synthesisItem in synthesisItems)
+        {
+            totalSynthesisCount += synthesisItem.synthesisCount;
+        }
+        //合計数を返す
+        return totalSynthesisCount;
+    }
+
+    //SynthesisItemを売却するメソッド
+        public void SaleSynthesisItem(SynthesisItem synthesisItem)
+    {
+        //売却したアイテムの個数を減らす
+        synthesisItem.synthesisCount--;
+        
+        //売却したアイテムの個数に応じてお金を増やす
+        money.money += synthesisItem.price;
+        money.totalMoney += synthesisItem.price;
+    }
 }
 
 //アイテムのクラス
@@ -101,5 +125,7 @@ public class SynthesisItem
     public int needAkikan;
     public int needCardboard;
     public int needPetbottle;
-    // 他に必要なアイテム情報を追加することができます
+    public int synthesisCount;
+    public int price;
+    public string detail;
 }

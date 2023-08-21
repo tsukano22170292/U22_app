@@ -95,5 +95,7 @@ public class createItem : MonoBehaviour
         failTexts.gameObject.SetActive(false);
         //合成成功時に表示するTextコンポーネントをアクティブにする
         successTexts.gameObject.SetActive(true);
+        // synthesisCount（累計合成数）の値を加算する
+        item.synthesisCount += 1;
     }
 }
