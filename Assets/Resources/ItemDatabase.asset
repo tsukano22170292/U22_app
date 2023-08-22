@@ -15,15 +15,15 @@ MonoBehaviour:
   items:
   - itemName: akikan
     itemID: 0
-    count: 10
+    count: 5
     itemImage: {fileID: 2800000, guid: 112de6bc295f7304aa735cbd0ca254bd, type: 3}
   - itemName: cardboard
     itemID: 1
-    count: 100
+    count: 79
     itemImage: {fileID: 2800000, guid: 0b68fca717e9c13458e5490fb0dab43d, type: 3}
   - itemName: petbottle
     itemID: 2
-    count: 1000
+    count: 59
     itemImage: {fileID: 2800000, guid: 48559a6b1edfcb246ab53a06c4b9f084, type: 3}
   money:
     money: 100
@@ -31,8 +31,28 @@ MonoBehaviour:
   synthesisItems:
   - itemName: fuku
     synthesisItemID: 0
-    count: 0
+    count: 25
     itemImage: {fileID: 2800000, guid: fa8fbe9038976f04f9f291f0bf7a6b57, type: 3}
     needAkikan: 0
     needCardboard: 0
-    needPetbottle: 15
+    needPetbottle: 5
+    synthesisCount: 22
+    price: 3000
+  - itemName: book
+    synthesisItemID: 1
+    count: 10
+    itemImage: {fileID: 2800000, guid: 9b834f738e2e07d4ca50b82cdfdb7465, type: 3}
+    needAkikan: 0
+    needCardboard: 3
+    needPetbottle: 0
+    synthesisCount: 7
+    price: 1500
+  - itemName: frypan
+    synthesisItemID: 2
+    count: 20
+    itemImage: {fileID: 2800000, guid: 1092e13455ac15144829754f70011b9c, type: 3}
+    needAkikan: 10
+    needCardboard: 0
+    needPetbottle: 0
+    synthesisCount: 15
+    price: 5000

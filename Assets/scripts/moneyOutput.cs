@@ -14,7 +14,7 @@ public class moneyOutput : MonoBehaviour
         // お金の合計を表示するテキストを更新する
         foreach (TextMeshProUGUI text in totalMoneyText)
         {
-            text.text = "かせいだおかね" + itemDatabase.money.totalMoney.ToString() + "えん";
+            text.text = "かせいだお金" + itemDatabase.money.totalMoney.ToString() + "円";
         }
         
     }

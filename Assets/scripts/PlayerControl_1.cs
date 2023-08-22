@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl_1 : MonoBehaviour
 {
@@ -70,20 +71,30 @@ public class PlayerControl_1 : MonoBehaviour
     //塚野が追加したごみとの衝突処理用のメソッド
     void OnCollisionEnter2D(Collision2D collision)
     {   
-        if (collision.gameObject != null)
+        //akikanと衝突したら
+        if (collision.gameObject.tag == "akikan")
         {
-           string collidingObjectTag = collision.gameObject.tag;
-            if (collidingObjectTag == "akikan" || collidingObjectTag == "cardboard" || collidingObjectTag == "petbottle")
-            {
-                Destroy(collision.gameObject);//他のオブジェクトに触れたら消える
+            //akikanを消す
+            Destroy(collision.gameObject);
+            //akikanの数を増やす
+            itemDatabase.items[0].count++;
+        }
+        //cardboardと衝突したら
+        else if (collision.gameObject.tag == "cardboard")
+        {
+            //cardboardを消す
+            Destroy(collision.gameObject);
+            //cardboardの数を増やす
+            itemDatabase.items[1].count++;
+        }
 
-                //アイテムデータの更新
-                Item item = itemDatabase.GetItemByTag(collidingObjectTag);
-                if(item != null)
-                {
-                    item.count++;
-                }
-            } 
+        //petbottleと衝突したら
+        else if (collision.gameObject.tag == "petbottle")
+        {
+            //petbottleを消す
+            Destroy(collision.gameObject);
+            //petbottleの数を増やす
+            itemDatabase.items[2].count++;
         }
     }
 }

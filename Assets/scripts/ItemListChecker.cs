@@ -25,4 +25,19 @@ public class ItemListChecker : MonoBehaviour
             }
         }
     }
+
+    private void Update()
+    {
+        // 各アイテムのcountの値を出力する
+        for (int i = 0; i < itemDatabase.items.Length; i++)
+        {
+            int count = itemDatabase.items[i].count;
+
+            if (i < itemCountTexts.Length)
+            {
+                // インベントリ内の各スロットのTextコンポーネントにcountの値を表示する
+                itemCountTexts[i].text = count.ToString();
+            }
+        }
+    }
 }

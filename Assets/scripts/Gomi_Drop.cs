@@ -7,7 +7,7 @@ public class Gomi_Drop : MonoBehaviour
     public GameObject object_cardboard; //２個目のオブジェクト
     public GameObject object_petbottle;
 
-    public int objectCount = 30; //オブジェクトを生成する数
+    public int objectCount; //オブジェクトを生成する数
 
     private Bounds tilemapBounds;
 
@@ -34,8 +34,6 @@ public class Gomi_Drop : MonoBehaviour
         {
             generatedObject = SpawnObject(spawnRangeX,spawnRangeY);
         }
-        Debug.Log("tilemapBounds.min: " + tilemapBounds.min);
-        Debug.Log("tilemapBounds.max: " + tilemapBounds.max);
     }
 
     private GameObject SpawnObject(float spawnRangeX, float spawnRangeY)
@@ -71,18 +69,16 @@ public class Gomi_Drop : MonoBehaviour
         }
         
         if (obj != null){
-            //生成したオブジェクトにコライダーを追加する
-            obj.AddComponent<BoxCollider2D>();
-            obj.SetActive(true); //表示する
 
             //重なりをチェック。重なっていたらtrue
             bool isOverlapping = CheckOverlap(obj);
-            Debug.Log("isOverlapping:" + isOverlapping);
             if(isOverlapping){
-                //オブジェクトが生成されるはずだった座標をデバッグログに表示
-                Debug.Log("Expected spaw position" + spawnPositionTemp);
-
                 Destroy(obj); //重なっていたらオブジェクトを破棄する
+            }
+            //重なりがなければ、オブジェクトを表示する
+            else
+            {
+                obj.SetActive(true); //表示する
             }
         }
 
