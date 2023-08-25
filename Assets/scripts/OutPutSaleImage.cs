@@ -34,7 +34,16 @@ public class OutPutSaleImage : MonoBehaviour
 
     public void SubCount()
     {
-        count--;
+        // 売却するアイテムの個数が0以下の場合は何もしない
+        if (count <= 0)
+        {
+            return;
+        }
+        // 売却するアイテムの個数が0より大きい場合はアイテムを売却する
+        else
+        {
+            count--;
+        }
     }
 
     public void CompleteImageFalse()
