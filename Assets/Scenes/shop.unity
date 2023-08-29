@@ -330,8 +330,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopObject
       objectReference: {fileID: 0}
-    - target: {fileID: 4556979183773015652, guid: 9841a46c58aafe947861b846aa88200b, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 5083029177700078984, guid: 9841a46c58aafe947861b846aa88200b, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
