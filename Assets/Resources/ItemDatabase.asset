@@ -15,27 +15,27 @@ MonoBehaviour:
   items:
   - itemName: akikan
     itemID: 0
-    count: 13
+    count: 17
     itemImage: {fileID: 2800000, guid: fc1811338761d0e4e8fed9e6a5652c2f, type: 3}
   - itemName: cardboard
     itemID: 1
-    count: 81
+    count: 84
     itemImage: {fileID: 2800000, guid: 8e29ed3cf4b9d0d4b9bdce8b4cbc3b72, type: 3}
   - itemName: petbottle
     itemID: 2
-    count: 62
+    count: 65
     itemImage: {fileID: 2800000, guid: 85f0b464cf979ab418884630c045dee6, type: 3}
   money:
-    money: 7600
-    totalMoney: 17500
+    money: 19600
+    totalMoney: 29500
   synthesisItems:
   - itemName: fuku
     synthesisItemID: 0
-    count: 24
+    count: 20
     itemImage: {fileID: 2800000, guid: fa8fbe9038976f04f9f291f0bf7a6b57, type: 3}
     needAkikan: 0
     needCardboard: 0
-    needPetbottle: 5
+    needPetbottle: 30
     synthesisCount: 22
     price: 3000
     detail: 
