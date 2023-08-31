@@ -7,9 +7,9 @@ public class NextSceneScript : MonoBehaviour
     private void Start()
     {
         // PlayerPrefsから"x"というキーで保存された値を取得
-        int x = PlayerPrefs.GetInt("x");
+        float x = PlayerPrefs.GetFloat("x");
         // PlayerPrefsから"y"というキーで保存された値を取得
-        int y = PlayerPrefs.GetInt("y");
+        float y = PlayerPrefs.GetFloat("y");
         
         // プレイヤーの位置を変更
         player.transform.position = new Vector2(x, y);

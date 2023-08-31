@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 8017186}
   - component: {fileID: 8017185}
   - component: {fileID: 8017184}
-  - component: {fileID: 8017183}
+  - component: {fileID: 8017187}
   m_Layer: 0
   m_Name: scenechange_house3
   m_TagString: Untagged
@@ -158,18 +158,6 @@ Transform:
   m_Father: {fileID: 865847890}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8017183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8017181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bae268164faf4744aa5dad317f05f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!19719996 &8017184
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -315,6 +303,21 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &8017187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7e741bd935c194ca2c84a9d79bf815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: -9.5
+  y: -4.5
+  SceneName: map
 --- !u!1 &278647046
 GameObject:
   m_ObjectHideFlags: 0

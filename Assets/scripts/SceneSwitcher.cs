@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
 {
     // x軸を指定する変数
-    public int x;
+    public float x;
     // y軸を指定する変数
-    public int y;
+    public float y;
 
     public string SceneName;
    
@@ -16,9 +16,9 @@ public class SceneSwitcher : MonoBehaviour
         {
             SceneManager.LoadScene(SceneName);
             // 次のシーンにxの値を渡す
-            PlayerPrefs.SetInt("x", x);
+            PlayerPrefs.SetFloat("x", x);
             // 次のシーンにyの値を渡す
-            PlayerPrefs.SetInt("y", y);
+            PlayerPrefs.SetFloat("y", y);
         }
     }
 }
