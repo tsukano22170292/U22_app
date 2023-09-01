@@ -6,6 +6,8 @@ public class talk1 : MonoBehaviour
     public GameObject dialogue;
     public Text Text;
 
+    public GameObject image;
+
     [SerializeField]
     string words = "ここにセリフ";
 
@@ -22,12 +24,22 @@ public class talk1 : MonoBehaviour
                 {
                     dialogue.SetActive(false);
                     isTextVisible = false;
+                    //もし、imageがあれば  
+                    if (image != null)
+                    {
+                        image.SetActive(false);
+                    }
                 }
                 else
                 {
                     Text.text = words;
                     dialogue.SetActive(true);
                     isTextVisible = true;
+                    //もし、imageがあれば
+                    if (image != null)
+                    {
+                        image.SetActive(true);
+                    }
                 }
             }
         }
@@ -48,6 +60,10 @@ public class talk1 : MonoBehaviour
             isColliding = false;
             dialogue.SetActive(false);
             isTextVisible = false;
+            if (image != null)
+            {
+                image.SetActive(false);
+            }
         }
     }
 }

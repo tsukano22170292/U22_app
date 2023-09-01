@@ -9,7 +9,7 @@ public class SceneSwitcher : MonoBehaviour
     public float y;
 
     public string SceneName;
-   
+
     private void OnCollisionEnter2D(Collision2D other)
      {
         if (other.gameObject.CompareTag("Player"))
