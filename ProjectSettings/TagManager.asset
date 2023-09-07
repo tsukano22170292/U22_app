@@ -16,7 +16,7 @@ TagManager:
   - Water
   - UI
   - BckgroundObject
-  - 
+  - Effect
   - 
   - 
   - 
@@ -65,4 +65,10 @@ TagManager:
     locked: 0
   - name: 'player '
     uniqueID: 2061689563
+    locked: 0
+  - name: UI
+    uniqueID: 3564737315
+    locked: 0
+  - name: effect
+    uniqueID: 1500701545
     locked: 0
