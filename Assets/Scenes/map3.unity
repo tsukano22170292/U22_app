@@ -5953,7 +5953,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &848253251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14484,7 +14484,7 @@ GameObject:
   - component: {fileID: 1525490137}
   - component: {fileID: 1525490136}
   m_Layer: 0
-  m_Name: Grid (1)
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

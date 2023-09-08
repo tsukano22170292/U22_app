@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraManager : MonoBehaviour
+public class CameraManager : MonoBehaviour
 {
     public GameObject target; // 追従する対象を決める変数
     Vector3 pos;              // カメラの初期位置を記憶するための変数
@@ -10,6 +10,8 @@ public class cameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // カメラが映す範囲を固定にする
+        Camera.main.orthographic = true;
         pos = Camera.main.gameObject.transform.position; //カメラの初期位置を変数posに入れる
     }
 
